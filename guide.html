@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사용법 — 개발 계획 시뮬레이터</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<nav class="topnav" aria-label="주요 메뉴">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">개발 계획 시뮬레이터 <small>build-2611-01 · 기획 정호영</small></a>
+    <ul class="topnav-links">
+      <li><a href="index.html">시뮬레이터</a></li>
+      <li><a href="guide.html" class="active" aria-current="page">사용법</a></li>
+      <li><a href="plan.html">기획서</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">사용법</div>
+  <h1>로드맵 한 장으로 부문 부하를 미리 봅니다</h1>
+  <p>엑셀 시트 3장만 채우면 됩니다. 계산은 전부 이 브라우저 안에서 끝나고 파일은 어디로도 올라가지 않습니다.</p>
+</div></header>
+<main><div class="wrap">
+<div class="card">
+  <h2 style="margin-top:0">1. 시트 3장</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>시트</th><th>열</th><th>뜻</th></tr></thead>
+    <tbody>
+      <tr><td>로드맵</td><td>프로젝트 · 단계 · 시작일 · 종료일</td><td>사내 로드맵에서 내려받은 기종별 단계 일정입니다.</td></tr>
+      <tr><td>부하기준</td><td>프로젝트(선택) · 단계 · 부문 · 주당투입</td><td>그 단계가 진행되는 한 주에 부문이 쓰는 인원입니다. 프로젝트를 적으면 그 기종에만 적용되고 일반 기준보다 우선합니다.</td></tr>
+      <tr><td>가용인력</td><td>부문 · 가용</td><td>부문의 주당 가용 인원입니다.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="sub" style="margin-top:10px">열 이름이 조금 달라도 읽습니다(기종·모델, 공정, 부서·팀 등).</p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">2. 계산 방식</h2>
+  <p>주는 월요일에 시작합니다.
+  단계가 그 주의 근무일(월~금) 중 며칠에 걸치는지 비율만큼 부하를 넣습니다.
+  수요일에 끝나는 단계는 그 주에 3/5 만 들어갑니다.</p>
+  <p>칸 색은 가용 대비 비율입니다 — 50% 미만 여유, 90% 이상 빠듯, 100% 초과 부족.
+  칸을 누르면 그 주를 채운 기종·단계와, 지난주보다 무엇이 시작·종료·증감했는지가 나옵니다.</p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">3. 가정 비교</h2>
+  <p>일정 이동(뒤 단계까지 함께 밀기), 단계 기간 늘이기·줄이기, 가용 인원 변경, 부하기준 변경을 원하는 만큼 쌓을 수 있습니다.
+  원본은 그대로 두고 복사본에만 적용합니다.</p>
+  <p>데이터 밖의 이유로 일정이 바뀌는 경우(협력사 지연, 고객 요청, 인증 일정)는 가정마다 <b>사유 메모</b>로 남깁니다.
+  엑셀로 내보내면 「가정목록」 시트에 가정과 사유가 함께 들어갑니다.</p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">4. 이번 판에서 하지 않는 것</h2>
+  <ul style="margin-left:20px">
+    <li>사내 로드맵 시스템 자동 연동 — 내려받은 엑셀을 올리는 방식입니다.</li>
+    <li>부하기준을 자동으로 정하기 — 단계·부문별 투입 인원은 부서가 협의해 표로 정합니다.</li>
+  </ul>
+</div>
+</div></main>
+<footer><div class="wrap">생성형 AI 업무자동화 전문가과정 2차수 · 프로젝트 01 · 기획 정호영</div></footer>
+</body>
+</html>

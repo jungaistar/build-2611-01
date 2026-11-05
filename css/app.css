@@ -1,0 +1,46 @@
+/* 이 앱 전용 — 공통 style.css 뒤에 읽는다 */
+h3{font-size:16px; font-weight:700; margin:24px 0 8px;}
+.ctrl{display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin:6px 0 12px; font-size:14px;}
+.ctrl input,.ctrl select,.form input,.form select{font:inherit; font-size:14px; padding:6px 8px; border:1px solid var(--line); border-radius:7px; background:#fff;}
+.legend{display:flex; flex-wrap:wrap; gap:12px; align-items:center; font-size:12.5px; color:var(--sub);}
+.legend i{display:inline-block; width:14px; height:14px; border-radius:3px; vertical-align:-2px; margin-right:-6px;}
+
+/* 부하 칸 — 색만으로 구분하지 않도록 숫자를 함께 쓴다 */
+.st-idle{background:#eef3f7;} .st-ok{background:#d6ecdf;} .st-tight{background:#fbe7b5;} .st-over{background:#f4b9ad;} .st-none{background:#fff;}
+.heat td.cell{text-align:center; min-width:42px; cursor:pointer; font-variant-numeric:tabular-nums; padding:6px 4px;}
+.heat td.cell.st-over{color:#7a1a0c; font-weight:700;}
+.heat td.cell:hover{outline:2px solid var(--accent); outline-offset:-2px;}
+.heat th small{font-weight:400; color:var(--sub); margin-left:4px;}
+.heat th.wk{font-size:11.5px; text-align:center; padding:6px 4px;}
+.heat tbody th{position:sticky; left:0; z-index:1; background:#eef2f6;}
+.stat.bad{background:#fdeae7;}
+
+.why{margin:14px 0; padding:14px 16px; border-radius:10px; border:1px solid var(--line); background:#fff;}
+.why p{margin:6px 0 10px;}
+.why table{max-width:520px;}
+.st-over-b{border-left:5px solid var(--danger);} .st-tight-b{border-left:5px solid #c79100;}
+.st-ok-b,.st-idle-b,.st-none-b{border-left:5px solid var(--ok);}
+
+.chart svg{width:100%; height:auto; display:block; background:#fff; border:1px solid var(--line); border-radius:10px;}
+.chart .legend{margin-top:6px;}
+svg .grid{stroke:#e6ebf0;} svg .ax{font-size:11px; fill:#5b6b7b;}
+svg .cap{stroke:var(--danger); stroke-dasharray:6 4; stroke-width:1.5;} svg .cap-t{font-size:11.5px; fill:var(--danger);}
+svg polyline{fill:none; stroke-width:2.4;}
+svg .l-need{stroke:var(--brand);} svg .l-before{stroke:#9aa9b8; stroke-dasharray:5 4;}
+.lg::before{content:''; display:inline-block; width:18px; height:3px; margin-right:6px; vertical-align:middle; background:var(--brand);}
+.lg.l-before::before{background:#9aa9b8;} .lg.l-alt::before{background:#7a5bb8;}
+svg .gl{font-size:12px; fill:var(--ink);} svg .gt{font-size:10.5px; fill:#fff; pointer-events:none;}
+svg .gb.s0{fill:#154b6e;} svg .gb.s1{fill:#0b6e99;} svg .gb.s2{fill:#2c8a6b;} svg .gb.s3{fill:#b07a12;} svg .gb.s4{fill:#8a4b9c;} svg .gb.s5{fill:#5b6b7b;}
+svg .gb.alt{opacity:.62; stroke:#152232; stroke-dasharray:3 2;}
+
+.form{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:10px 12px; align-items:end; margin:12px 0;}
+.form label{display:flex; flex-direction:column; gap:4px; font-size:13px; color:var(--sub);}
+.form label.chk{flex-direction:row; align-items:center; gap:6px; padding-bottom:8px;}
+.form label.wide{grid-column:1/-1;}
+.form [hidden]{display:none;}
+.adj{margin:8px 0 14px 20px; font-size:14px;}
+.adj li{margin:5px 0;}
+.adj .note-t{color:#4a2e86;}
+.adj .x{border:0; background:none; color:var(--danger); cursor:pointer; font-size:12.5px; text-decoration:underline;}
+tr.better td{background:#eaf6ef;} tr.worse td{background:#fdf0ed;}
+.warn ul{margin:6px 0 0 18px;}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기획서 — 개발 계획 시뮬레이터</title>
+<meta name="robots" content="index,follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.plan-figs figure{margin:0 0 22px;} .plan-figs img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;}
+.plan-figs figcaption{font-size:13px;color:var(--sub);text-align:center;margin-top:6px;}
+.plan td{white-space:normal;} .plan td .btn{min-height:36px;white-space:nowrap;}
+h3{font-size:15px;margin:16px 0 6px;} main ul{margin:0 0 10px 20px;}
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="주요 메뉴">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">개발 계획 시뮬레이터 <small>build-2611-01 · 기획 정호영</small></a>
+    <ul class="topnav-links">
+      <li><a href="index.html">도구</a></li>
+      <li><a href="guide.html">사용법</a></li>
+      <li><a href="plan.html" class="active" aria-current="page">기획서</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">생성형 AI 업무자동화 전문가과정 · 2차수 · 프로젝트 01 · 기획서 v1.0</div>
+  <h1>개발 계획 시뮬레이터 기획서</h1>
+  <p>사내 로드맵 Raw Data(엑셀)를 올리면 개발부터 생산까지 부문별 주간 업무 부하를 계산하고, 부족 구간의 사유와 일정·인원 가정의 변경 전후 비교를 보여 주는 도구입니다.</p>
+</div></header>
+<main><div class="wrap">
+<div class="card">
+  <h2 style="margin-top:0">기획서 내려받기</h2>
+  <p class="sub">파이프라인 · 아키텍처 · 와이어프레임 · 개발일지가 들어간 워드 문서입니다. 버전마다 따로 남깁니다.</p>
+  <div class="tablewrap plan"><table><thead><tr><th>버전</th><th>날짜</th><th>바뀐 점</th><th>파일</th></tr></thead><tbody><tr><td><b>v1.0</b></td><td>2026-11-02</td><td>첫 판 — 주간 부하·사유·가정 전후 비교·엑셀 내보내기 / 기획서 워드 판·파이프라인·아키텍처·와이어프레임 추가</td><td><a class="btn primary" href="docs/기획서/build-2611-01_정호영_개발계획시뮬레이터_기획서_v1.0.docx" download>워드 내려받기</a></td></tr></tbody></table></div>
+</div>
+<div class="card plan">
+  <h2 style="margin-top:0">요구사항과 구현</h2>
+  <div class="tablewrap"><table><thead><tr><th>기획서 요구</th><th>구현</th></tr></thead><tbody><tr><td>개발부터 생산까지 부문별 업무 부하 예상</td><td>로드맵 × 부하기준(단계·부문·주당투입) → 주별 부하표(히트맵)</td></tr><tr><td>일정 변경 즉시 반영</td><td>분석 기간·가정을 바꾸면 곧바로 다시 계산</td></tr><tr><td>Raw Data 그대로 분석</td><td>엑셀 시트 3장(로드맵·부하기준·가용인력), 열 이름 별칭</td></tr><tr><td>시각적·수치적 분석</td><td>히트맵 · 부문 추이 꺾은선 · 간트 · 부문 요약(최대·부족 주·누적 인주)</td></tr><tr><td>증가/부족 사유</td><td>칸을 누르면 기여 기종·단계와 지난주 대비 시작·종료·증감</td></tr><tr><td>가정 상황 반영 · 전후 비교</td><td>일정 이동(뒤 단계 함께)·기간 증감·가용 변경·부하기준 변경, 부문별 전→후 표와 전후 꺾은선</td></tr><tr><td>데이터 밖의 사유로 바뀐 일정 표현</td><td>가정마다 사유 메모 — 비교 화면과 엑셀 「가정목록」에 함께 남음</td></tr></tbody></table></div>
+</div>
+<div class="card plan-figs"><h2 style="margin-top:0">그림으로 보기</h2><figure><img src="docs/img/pipeline.png" alt="처리 흐름(파이프라인)" loading="lazy"><figcaption>처리 흐름(파이프라인)</figcaption></figure><figure><img src="docs/img/architecture.png" alt="구성(아키텍처)" loading="lazy"><figcaption>구성(아키텍처)</figcaption></figure><figure><img src="docs/img/wireframe-1.png" alt="와이어프레임 — 부하 분석 화면" loading="lazy"><figcaption>와이어프레임 — 부하 분석 화면</figcaption></figure><figure><img src="docs/img/wireframe-2.png" alt="와이어프레임 — 가정 비교 화면" loading="lazy"><figcaption>와이어프레임 — 가정 비교 화면</figcaption></figure><figure><img src="docs/img/screen.png" alt="실제 화면(예제 데이터)" loading="lazy"><figcaption>실제 화면(예제 데이터)</figcaption></figure></div>
+<div class="card"><h2 style="margin-top:0">개발일지</h2><h3>2026-11-02 · 첫 판</h3><ul><li>패들릿 build02 정호영 기획2를 작업 지시서(CLAUDE.md)로 옮기고 구현</li><li>계산 엔진 sim.js — 정리·검증, 근무일 비율 부하, 판정, 사유, 가정 4종, 전후 비교</li><li>화면 — 히트맵·사유·추이·간트·가정·엑셀</li><li>계산 테스트 42 · 화면 테스트 10 통과, GitHub Actions 통과, 배포</li></ul></div>
+</div></main>
+<footer><div class="wrap">생성형 AI 업무자동화 전문가과정 · 2차수 · 프로젝트 01 · 기획 정호영 · <a href="https://build-2611-00.jobability.co.kr/">2차수 프로젝트 총괄</a></div></footer>
+</body>
+</html>
