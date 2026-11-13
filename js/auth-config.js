@@ -150,10 +150,10 @@ window.AUTH_CONFIG = {
     },
     "landing": {
       "company": {
-        "name": "HD현대사이트솔루션 · HD건설기계",
-        "en": "HD HYUNDAI SITE SOLUTION · HD CONSTRUCTION EQUIPMENT",
+        "name": "HD현대사이트솔루션",
+        "en": "HD HYUNDAI SITE SOLUTION",
         "logo": "images/logo.png",
-        "logoH": 22
+        "logoH": 24
       },
       "slides": [
         {
