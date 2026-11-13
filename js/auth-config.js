@@ -149,18 +149,21 @@ window.AUTH_CONFIG = {
       ]
     },
     "landing": {
+      "company": {
+        "name": "HD현대사이트솔루션 · HD건설기계",
+        "en": "HD HYUNDAI SITE SOLUTION · HD CONSTRUCTION EQUIPMENT",
+        "logo": "images/logo.png",
+        "logoH": 22
+      },
       "slides": [
         {
-          "image": "images/slide-1.jpg"
-        },
-        {
-          "image": "images/slide-2.jpg"
-        },
-        {
-          "image": "images/slide-3.jpg"
+          "image": "images/slide-1.jpg",
+          "tone": "dark"
         }
       ],
-      "heroMode": "slide"
+      "heroMode": "slide",
+      "headline": "개발 공수 최적화\n시뮬레이션 플랫폼",
+      "lead": "프로젝트별 개발 공수를 분석·예측하고, 일정과 자원 배분을 시뮬레이션하여 과부하를 예방하고 최적의 실행 계획을 수립합니다."
     }
   }
 };
